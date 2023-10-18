@@ -52,11 +52,13 @@
     gap: 8px;
     border-radius: 8px;
     background: #F4F4F6;
-    color: #A1A6B1;
+    color: var(--040013-black-main, #040013);
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
+    border: none;
 }
+
 .regist-field_plus_descr-text {
     display: flex;
     flex-direction: column;
@@ -156,7 +158,7 @@ label {
 }
 
 .radio-box:checked + .item-style::before {
-    content: counter(input);
+    content: attr(data-number); 
     display: flex;
     width: 40px;
     height: 40px;

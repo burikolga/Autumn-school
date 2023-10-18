@@ -30,126 +30,93 @@
                 </div>
             </div>
             <div class="form">
-                <div class="form_fill">
-                    <div class="descr">
-                        <div class="descr_profession">
-                            <div>
-                                <input type="radio" id="study" name="drone" value="study" class=" radio-box" checked />
-                                <span class="radio-style"></span>
-                                <label for="study">Студент / выпускник</label>
-                            </div>
-                        
-                            <div>
-                                <input type="radio" id="work" name="drone" value="work" class=" radio-box" />
-                                <span class="radio-style"></span>
-                                <label for="work">Сотрудник</label>
-                            </div>
+                <form>
+                    <div class="form_fill">
+                        <div class="descr">
+                            <div class="descr_profession">
+                                <div>
+                                    <input type="radio" id="study" name="age" value="study" class=" radio-box" checked />
+                                    <span class="radio-style"></span>
+                                    <label for="study">Студент / выпускник</label>
+                                </div>
                             
-                        </div>
-                        <div class="descr_form">
-                            <div class="course">
-                                <div class="course_study">
-                                    <div class="course_study_text">Курс</div>
-                                    <div class="course_study_choose">
-                                        <div>
-                                            <input type="radio" id="1" name="drone" value="1" class=" radio-box" checked />
-                                            <span class="item-style"><label for="1">1</label></span>
-                                        </div>
-                                        <div>
-                                            <input type="radio" id="2" name="drone" value="2" class=" radio-box" checked />
-                                            <span class="item-style"><label for="2">2</label></span>
-                                        </div>
-                                        <div>
-                                            <input type="radio" id="3" name="drone" value="3" class=" radio-box" checked />
-                                            <span class="item-style"><label for="3">3</label></span>
-                                        </div>
-                                        <div>
-                                            <input type="radio" id="4" name="drone" value="4" class=" radio-box" checked />
-                                            <span class="item-style"><label for="4">4</label></span>
-                                        </div>
-                                        <div>
-                                            <input type="radio" id="5" name="drone" value="5" class=" radio-box" checked />
-                                            <span class="item-style"><label for="5">5</label></span>
-                                        </div>
-                                        <div>
-                                            <input type="radio" id="6" name="drone" value="6" class=" radio-box" checked />
-                                            <span class="item-style"><label for="6">6</label></span>
+                                <div>
+                                    <input type="radio" id="work" name="age" value="work" class=" radio-box" />
+                                    <span class="radio-style"></span>
+                                    <label for="work">Сотрудник</label>
+                                </div>
+                                
+                            </div>
+                            <div class="descr_form">
+                                <div class="course">
+                                    <div class="course_study">
+                                        <div class="course_study_text">Курс</div>
+                                        <div class="course_study_choose">
+                                            <div>
+                                                <input type="radio" id="1" name="drone"  value="1" class=" radio-box" checked />
+                                                <span class="item-style" data-number="1"><label for="1">1</label></span>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="2" name="drone" value="2" class=" radio-box" checked />
+                                                <span class="item-style" data-number="2"><label for="2">2</label></span>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="3" name="drone" value="3" class=" radio-box" checked />
+                                                <span class="item-style" data-number="3"><label for="3">3</label></span>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="4" name="drone" value="4" class=" radio-box" checked />
+                                                <span class="item-style" data-number="4"><label for="4">4</label></span>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="5" name="drone" value="5" class=" radio-box" checked />
+                                                <span class="item-style" data-number="5"><label for="5">5</label></span>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="6" name="drone" value="6" class=" radio-box" checked />
+                                                <span class="item-style" data-number="6"><label for="6">6</label></span>
+                                                
+                                            </div>
                                             
                                         </div>
-                                        <!-- <div class="course_study_choose_item">1</div>
-                                        <div class="course_study_choose_item">2</div>
-                                        <div class="course_study_choose_item">3</div>
-                                        <div class="course_study_choose_item">4</div>
-                                        <div class="course_study_choose_item">5</div>
-                                        <div class="course_study_choose_item course_study_choose_item_active">6</div> -->
+                                    </div>
+                                    <div class="course_finish">
+                                        <div class="square"></div>
+                                        <div>
+                                            <input type="checkbox" id="finish" name="drone" value="finish" class=" radio-box" />
+                                            <span class="square-style"></span>
+                                            <label for="finish">Уже окончил Вышку</label>
+                                        </div>
+                                        
                                     </div>
                                 </div>
-                                <div class="course_finish">
-                                    <div class="square"></div>
-                                    <div>
-                                        <input type="checkbox" id="finish" name="drone" value="finish" class=" radio-box" />
-                                        <span class="square-style"></span>
-                                        <label for="finish">Уже окончил Вышку</label>
+                                <div class="regist-field_plus_descr-text ">
+                                    <div class="text_above_regist-field">Ступень образования</div>
+                                    <div class="field_plus_open-menu">
+                                        <div class="text_in_regist-field">Ступень образования</div>
+                                        <img src="icons/rectan_solid.svg" alt="">
                                     </div>
-                                    <!-- <div class="text">Уже окончил Вышку</div> -->
+                                </div>
+                                <div class="regist-field_plus_descr-text">
+                                    <div class="text_above_regist-field">Факультет</div>
+                                    <div class="field_plus_open-menu">
+                                        <div class="text_in_regist-field">Факультет</div>
+                                        <img src="icons/rectan_solid.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="regist-field_plus_descr-text">
+                                    <div class="text_above_regist-field">Образовательная программа</div>
+                                    <div class="field_plus_open-menu">
+                                        <div class="text_in_regist-field">Образовательная программа</div>
+                                        <img src="icons/loupe.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="regist-field_plus_descr-text ">
-                                <div class="text_above_regist-field">Ступень образования</div>
-                                <div class="field_plus_open-menu">
-                                    <div class="text_in_regist-field">Ступень образования</div>
-                                    <img src="icons/rectan_solid.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="regist-field_plus_descr-text">
-                                <div class="text_above_regist-field">Факультет</div>
-                                <div class="field_plus_open-menu">
-                                    <div class="text_in_regist-field">Факультет</div>
-                                    <img src="icons/rectan_solid.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="regist-field_plus_descr-text">
-                                <div class="text_above_regist-field">Образовательная программа</div>
-                                <div class="field_plus_open-menu">
-                                    <div class="text_in_regist-field">Образовательная программа</div>
-                                    <img src="icons/loupe.svg" alt="">
-                                </div>
-                            </div>
+                            <input name="work" type="text" placeholder="Работа" class="descr_work inactive_form"></input>
                         </div>
-                        <div class="descr_work inactive_form">
-                            Работа
-                        </div>
+                        
                     </div>
-                    <!-- <div class="descr">
-                        <div class="who">
-                            <div class="inactive_form name">
-                                Имя и фамилия
-                            </div>
-                            <div class="gender">
-                                <div class="radio"></div>
-                                <div class="">Парень</div>
-                                <div class="radio"></div>
-                                <div class="">Девушка</div>
-                            </div>
-                        </div>
-                        <div class="born">
-                            <div class="born_words">Дата рождения</div>
-                            <div class="born_calendar"><span class="icon-calendar"></span></div>
-                        </div>
-                        <div class="tg inactive_form">
-                            Телеграм
-                        </div>
-                        <div class="tel inactive_form">
-                            Номер телефона
-                        </div>
-                        <div class="information">
-                            <div class="info inactive_form">
-                                О себе
-                            </div>
-                            <div class="descr">Например: Редко готовлю, но люблю ботать на кухне по ночам. Хочу завести собаку. Очень люблю читать, играть в хорроры и смотреть аниме. Открыт к общению и взаимопомощи :)</div>
-                        </div>
-                    </div> -->
-                </div>
+                </form>
                 <div class="form_result">
                     <div class="all">
                         <div class="text">

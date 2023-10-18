@@ -36,51 +36,48 @@
                             <div class="title">
                                 Аватар профиля
                             </div>
-                            <button class="button_dark">
+                            <label class="button_dark">
+                                <input type="file" >
                                 Загрузить
-                            </button>
+                            </label>
+                            
+                            <!-- <button class="button_dark">
+                                Загрузить
+                            </button> -->
                         </div>
                         <div class="subtitle">
                             Загрузите фотографию весом не более 10 мб
                         </div>
                     </div>
-                    <div class="descr">
-                        <div class="who">
-                            <input class="inactive_form name">
-                                Имя и фамилия
-                            </input>
-                            <div class="gender">
-                                <div>
-                                    <input type="radio" id="man" name="drone" value="man" class=" radio-box" checked />
-                                    <span class="radio-style"></span>
-                                    <label for="man">Парень</label>
+                    <form action="#">
+                        <div class="descr">
+                            <div class="who">
+                                <input name="name" type="text" placeholder="Имя и фамилия" class="inactive_form name"></input>
+                                <div class="gender">
+                                    <div>
+                                        <input type="radio" id="man" name="drone" value="man" class=" radio-box" checked />
+                                        <span class="radio-style"></span>
+                                        <label for="man">Парень</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="woman" name="drone" value="woman" class=" radio-box" />
+                                        <span class="radio-style"></span>
+                                        <label for="woman">Девушка</label>
+                                    </div>
                                 </div>
-                            
-                                <div>
-                                    <input type="radio" id="woman" name="drone" value="woman" class=" radio-box" />
-                                    <span class="radio-style"></span>
-                                    <label for="woman">Девушка</label>
-                                </div>
-                                
+                            </div>
+                            <div class="born">
+                                <div class="born_words">Дата рождения</div>
+                                <div class="born_calendar"><span class="icon-calendar"></span></div>
+                            </div>
+                            <input name="tg" type="text" placeholder="Телеграм" class="tg inactive_form"></input>
+                            <input name="phone" type="number" placeholder="Номер телефона" class="tel inactive_form"></input>
+                            <div class="information">
+                                <textarea name="descr" class="info inactive_form" placeholder="О себе"></textarea>
+                                <div class="descr">Например: Редко готовлю, но люблю ботать на кухне по ночам. Хочу завести собаку. Очень люблю читать, играть в хорроры и смотреть аниме. Открыт к общению и взаимопомощи :)</div>
                             </div>
                         </div>
-                        <div class="born">
-                            <div class="born_words">Дата рождения</div>
-                            <div class="born_calendar"><span class="icon-calendar"></span></div>
-                        </div>
-                        <div class="tg inactive_form">
-                            Телеграм
-                        </div>
-                        <div class="tel inactive_form">
-                            Номер телефона
-                        </div>
-                        <div class="information">
-                            <div class="info inactive_form">
-                                О себе
-                            </div>
-                            <div class="descr">Например: Редко готовлю, но люблю ботать на кухне по ночам. Хочу завести собаку. Очень люблю читать, играть в хорроры и смотреть аниме. Открыт к общению и взаимопомощи :)</div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 <div class="form_result">
                     <div class="all">
