@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulse</title>
+    <title>Homeet</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/blocks/style.min.css">
@@ -30,29 +30,27 @@
                 </div>
             </div>
             <div class="form">
-                <div class="form_fill">
-                    <div class="photo">
-                        <div class="load">
-                            <div class="title">
-                                Аватар профиля
+                <form action="#">
+                    <div class="form_fill">
+                        <div class="photo display_image" ">
+                            <div class="load">
+                                <div class="title">
+                                    Аватар профиля
+                                </div>
+                                <label class="button_dark">
+                                    <input type="file" id="image_input" >
+                                    Загрузить
+                                </label>
+                                
                             </div>
-                            <label class="button_dark">
-                                <input type="file" >
-                                Загрузить
-                            </label>
-                            
-                            <!-- <button class="button_dark">
-                                Загрузить
-                            </button> -->
+                            <div class="subtitle">
+                                Загрузите фотографию весом не более 10 мб
+                            </div>
                         </div>
-                        <div class="subtitle">
-                            Загрузите фотографию весом не более 10 мб
-                        </div>
-                    </div>
-                    <form action="#">
+                        
                         <div class="descr">
                             <div class="who">
-                                <input name="name" type="text" placeholder="Имя и фамилия" class="inactive_form name"></input>
+                                <input name="name" type="text" id="fillFormName" placeholder="Имя и фамилия" class="inactive_form name" autocomplete="off"></input>
                                 <div class="gender">
                                     <div>
                                         <input type="radio" id="man" name="drone" value="man" class=" radio-box" checked />
@@ -73,12 +71,13 @@
                             <input name="tg" type="text" placeholder="Телеграм" class="tg inactive_form"></input>
                             <input name="phone" type="number" placeholder="Номер телефона" class="tel inactive_form"></input>
                             <div class="information">
-                                <textarea name="descr" class="info inactive_form" placeholder="О себе"></textarea>
+                                <textarea name="descr" class="info inactive_form" placeholder="О себе"  autocomplete="off"></textarea>
                                 <div class="descr">Например: Редко готовлю, но люблю ботать на кухне по ночам. Хочу завести собаку. Очень люблю читать, играть в хорроры и смотреть аниме. Открыт к общению и взаимопомощи :)</div>
                             </div>
                         </div>
-                    </form>
-                </div>
+                        
+                    </div>
+                </form>
                 <div class="form_result">
                     <div class="all">
                         <div class="text">
@@ -86,50 +85,54 @@
                                 Так будет выглядеть твоя будущая страница
                             </div>
                         </div>
-                        <div class="example">
-                            <div class="picture">
-                                <div class="photo"></div>
-                                <button class="button_disable">Показать контакты</button>
-                            </div>
-                            <div class="text">
-                                <div class="name">
-                                    <div class="FCs">
-                                        <div class="full_name">Саша Фефелов</div>
-                                        <div class="age">
-                                            <div class="gen">Парень</div>
-                                            <div class="circle"></div>
-                                            <div class="age">21 год</div>
-                                            <div class="circle"></div>
-                                            <div class="course"></div>
+                        <form action="#">
+                            <div class="example">
+                                <div class="picture">
+                                    <div class="photo display_image">
+                                        <div id="display_image"></div>
+                                    </div>
+                                    <button class="button_disable">Показать контакты</button>
+                                </div>
+                                <div class="text">
+                                    <div class="name">
+                                        <div class="FCs">
+                                            <input name="name" type="text" required disabled="disabled" id="resultFormName" class=" full_name"></input>
+                                            <div class="age">
+                                                <div class="gen">Парень</div>
+                                                <div class="circle"></div>
+                                                <div class="age">21 год</div>
+                                                <div class="circle"></div>
+                                                <div class="course"></div>
+                                            </div>
+                                        </div>
+                                        <div class="search"></div>
+                                        <div class="bio">
+                                            <div class="bio_text">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</div>
+                                            <div class="action">
+                                                <div class="word">Развернуть</div>
+                                                <div class="rectan"><div class="rectan_img"><img src="icons/rectan.svg" alt=""></div></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="search"></div>
-                                    <div class="bio">
-                                        <div class="bio_text">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</div>
-                                        <div class="action">
-                                            <div class="word">Развернуть</div>
-                                            <div class="rectan"><div class="rectan_img"><img src="icons/rectan.svg" alt=""></div></div>
+                                    <div class="descr">
+                                        <div class="first">
+                                            <div class="first1"></div>
+                                            <div class="first2">
+                                                <div class="first2_1"></div>
+                                                <div class="first2_2"></div>
+                                            </div>
+                                        </div>
+                                        <div class="second">
+                                            <div class="line"></div>
+                                            <div class="second2">
+                                                <div class="second2_1"></div>
+                                                <div class="second2_2"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="descr">
-                                    <div class="first">
-                                        <div class="first1"></div>
-                                        <div class="first2">
-                                            <div class="first2_1"></div>
-                                            <div class="first2_2"></div>
-                                        </div>
-                                    </div>
-                                    <div class="second">
-                                        <div class="line"></div>
-                                        <div class="second2">
-                                            <div class="second2_1"></div>
-                                            <div class="second2_2"></div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     <div class="descr">
                         <div class="wrapper">
@@ -174,5 +177,7 @@
         </div>
         <div class="line"></div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

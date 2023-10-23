@@ -241,11 +241,15 @@ p {
                                 gap: 4px;
                                 align-self: stretch;
                                 .full_name {
+                                    all: unset;
                                     color: var(--040013-black-main, #040013);
                                     font-size: 18px;
                                     font-style: normal;
                                     font-weight: 700;
-
+                                    height: 22px;
+                                    width: 350px;
+                                    border-radius: 4px;
+                                    
                                 }
                                 .age {
                                     display: flex;

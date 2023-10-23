@@ -229,6 +229,12 @@ p {
                             stroke: #EBEBEB;
                             border-radius: 16px;
                             border: 1px dashed var(--d-9-d-1-e-0-stroke, #EBEBEB);
+                            #display_image {
+                                width: 140;
+                                height: 140;
+                                background-position: center;
+                                background-size: center ;
+                            }
                         }
                         button {
                             display: flex;
@@ -267,13 +273,19 @@ p {
                                 align-items: flex-start;
                                 gap: 4px;
                                 align-self: stretch;
+                                
                                 .full_name {
+                                    all: unset;
                                     color: var(--040013-black-main, #040013);
                                     font-size: 18px;
                                     font-style: normal;
                                     font-weight: 700;
-
+                                    height: 22px;
+                                    width: 350px;
+                                    border-radius: 4px;
+                                    background: var(--eeeef-1-filter-hover, #EEEEF1);
                                 }
+                                
                                 .age {
                                     display: flex;
                                     align-items: center;

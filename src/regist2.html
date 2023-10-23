@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulse</title>
+    <title>Homeet</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/blocks/style2.min.css">
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="form">
-                <form>
+                <form action="#">
                     <div class="form_fill">
                         <div class="descr">
                             <div class="descr_profession">
@@ -124,50 +124,52 @@
                                 Так будет выглядеть твоя будущая страница
                             </div>
                         </div>
-                        <div class="example">
-                            <div class="picture">
-                                <div class="photo"><img src="img/photo.svg" alt=""></div>
-                                <button class="button_disable">Показать контакты</button>
-                            </div>
-                            <div class="text">
-                                <div class="name">
-                                    <div class="FCs">
-                                        <div class="full_name">Саша Фефелов</div>
-                                        <div class="age">
-                                            <div class="gen">Парень</div>
-                                            <div class="circle"></div>
-                                            <div class="age">21 год</div>
-                                            <div class="circle"></div>
-                                            <div class="course">1 курс бакалавриат ВШБ ИБ</div>
+                        <form action="#">
+                            <div class="example">
+                                <div class="picture">
+                                    <div class="photo"></div>
+                                    <button class="button_disable">Показать контакты</button>
+                                </div>
+                                <div class="text">
+                                    <div class="name">
+                                        <div class="FCs">
+                                            <input name="name" type="text" required disabled="disabled" id="resultFormName" class=" full_name"></input>
+                                            <div class="age">
+                                                <div class="gen">Парень</div>
+                                                <div class="circle"></div>
+                                                <div class="age">21 год</div>
+                                                <div class="circle"></div>
+                                                <div class="course">1 курс бакалавриат ВШБ ИБ</div>
+                                            </div>
+                                        </div>
+                                        <div class="search">СТО в Бизнес в стиле .RU</div>
+                                        <div class="bio">
+                                            <div class="bio_text">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</div>
+                                            <div class="action">
+                                                <div class="word">Развернуть</div>
+                                                <div class="rectan"><div class="rectan_img"><img src="icons/rectan.svg" alt=""></div></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="search">СТО в Бизнес в стиле .RU</div>
-                                    <div class="bio">
-                                        <div class="bio_text">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</div>
-                                        <div class="action">
-                                            <div class="word">Развернуть</div>
-                                            <div class="rectan"><div class="rectan_img"><img src="icons/rectan.svg" alt=""></div></div>
+                                    <div class="descr">
+                                        <div class="first">
+                                            <div class="first1"></div>
+                                            <div class="first2">
+                                                <div class="first2_1"></div>
+                                                <div class="first2_2"></div>
+                                            </div>
+                                        </div>
+                                        <div class="second">
+                                            <div class="line"></div>
+                                            <div class="second2">
+                                                <div class="second2_1"></div>
+                                                <div class="second2_2"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="descr">
-                                    <div class="first">
-                                        <div class="first1"></div>
-                                        <div class="first2">
-                                            <div class="first2_1"></div>
-                                            <div class="first2_2"></div>
-                                        </div>
-                                    </div>
-                                    <div class="second">
-                                        <div class="line"></div>
-                                        <div class="second2">
-                                            <div class="second2_1"></div>
-                                            <div class="second2_2"></div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     <div class="descr">
                         <div class="wrapper">
@@ -212,5 +214,7 @@
         </div>
         <div class="line"></div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/script2.js"></script>
 </body>
 </html>
