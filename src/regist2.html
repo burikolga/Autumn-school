@@ -35,15 +35,15 @@
                         <div class="descr">
                             <div class="descr_profession">
                                 <div>
-                                    <input type="radio" id="study" name="age" value="study" class=" radio-box" checked />
+                                    <input type="radio" id="statusStudy" name="age" value="study" class=" radio-box" checked />
                                     <span class="radio-style"></span>
-                                    <label for="study">Студент / выпускник</label>
+                                    <label for="statusStudy">Студент / выпускник</label>
                                 </div>
                             
                                 <div>
-                                    <input type="radio" id="work" name="age" value="work" class=" radio-box" />
+                                    <input type="radio" id="statusWork" name="age" value="work" class=" radio-box" />
                                     <span class="radio-style"></span>
-                                    <label for="work">Сотрудник</label>
+                                    <label for="statusWork">Сотрудник</label>
                                 </div>
                                 
                             </div>
@@ -94,25 +94,25 @@
                                     <div class="text_above_regist-field">Ступень образования</div>
                                     <div class="field_plus_open-menu">
                                         <div class="text_in_regist-field">Ступень образования</div>
-                                        <img src="icons/rectan_solid.svg" alt="">
+                                        <img src="icons/rectan_solid.svg" alt="#">
                                     </div>
                                 </div>
                                 <div class="regist-field_plus_descr-text">
                                     <div class="text_above_regist-field">Факультет</div>
                                     <div class="field_plus_open-menu">
                                         <div class="text_in_regist-field">Факультет</div>
-                                        <img src="icons/rectan_solid.svg" alt="">
+                                        <img src="icons/rectan_solid.svg" alt="#">
                                     </div>
                                 </div>
                                 <div class="regist-field_plus_descr-text">
                                     <div class="text_above_regist-field">Образовательная программа</div>
                                     <div class="field_plus_open-menu">
                                         <div class="text_in_regist-field">Образовательная программа</div>
-                                        <img src="icons/loupe.svg" alt="">
+                                        <img src="icons/loupe.svg" alt="#">
                                     </div>
                                 </div>
                             </div>
-                            <input name="work" type="text" placeholder="Работа" class="descr_work inactive_form"></input>
+                            <input name="work" type="text" placeholder="Работа" id="fillFormWork" class="descr_work inactive_form"></input>
                         </div>
                         
                     </div>
@@ -142,12 +142,14 @@
                                                 <div class="course">1 курс бакалавриат ВШБ ИБ</div>
                                             </div>
                                         </div>
-                                        <div class="search">СТО в Бизнес в стиле .RU</div>
+                                        <input name="work" type="text" required disabled="disabled" id="resultFormWork" class="search"></input>
+                                        <!-- <div class="search">СТО в Бизнес в стиле .RU</div> -->
                                         <div class="bio">
-                                            <div class="bio_text">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</div>
+                                            <textarea name="descr" class="info inactive_form bio_text" required disabled="disabled" id="resultFormDescr" autocomplete="off"></textarea>
+                                            <!-- <div class="bio_text">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</div> -->
                                             <div class="action">
-                                                <div class="word">Развернуть</div>
-                                                <div class="rectan"><div class="rectan_img"><img src="icons/rectan.svg" alt=""></div></div>
+                                                <div id="more" class="word">Развернуть</div>
+                                                <!-- <div id="more"></div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -169,7 +171,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        </form> 
                     </div>
                     <div class="descr">
                         <div class="wrapper">

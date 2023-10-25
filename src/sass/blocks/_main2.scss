@@ -272,18 +272,19 @@ p {
                                 }
                             }
                             .search {
-                                display: flex;
-                                width: 121px;
+                                all: unset;
                                 height: 17px;
-                                padding: 3px 6px;
-                                align-items: center;
-                                gap: 32px;
+                                padding: 0px 6px 1px 6px;
                                 border-radius: 4px;
                                 background: var(--eeeef-1-filter-hover, #EEEEF1);
                                 color: var(--040013-black-main, #040013);
                                 font-size: 9px;
                                 font-style: normal;
                                 font-weight: 500;
+                                display: inline-block;
+                                min-width: 80px;
+                                max-width: 406px;
+                                box-sizing: border-box;
                             }
                             .bio {
                                 display: flex;
@@ -292,12 +293,32 @@ p {
                                 align-self: stretch;
                                 height: 11px;
                                 &_text {
+                                    all: unset;
+                                    resize: none;
+                                    padding: 0 0;
+                                    border-radius: 4px;
                                     color: var(--5-d-5-b-66-secondary-black, #5D5B66);
                                     font-size: 9px;
                                     font-style: normal;
                                     font-weight: 500;
                                     width: 315px;
+                                    height: 17px;
                                 }
+                                // &_text.active {
+                                //     #more::after {
+                                //         content: url("../../icons/rectanBack.svg");
+                                //         height: 2px;
+                                //         width: 5px;
+                                //         margin-left: 4px;
+                                //     }
+                                // }
+                            
+                                // #more::after {
+                                //     content: url("../../icons/rectan.svg");
+                                //     height: 2px;
+                                //     width: 5px;
+                                //     margin-left: 4px;
+                                // }
                                 .action {
                                     display: flex;
                                     align-items: center;
@@ -309,12 +330,11 @@ p {
                                         font-style: normal;
                                         font-weight: 500;
                                     }
-                                    .rectan {
-                                        display: flex;
-                                        padding-bottom: 1px;
-                                        flex-direction: column;
-                                        align-items: flex-start;
-                                        
+                                    #more::after {
+                                        content: url("../../icons/rectan.svg");
+                                        height: 2px;
+                                        width: 5px;
+                                        margin-left: 4px;
                                     }
                                 }
                             }

@@ -71,7 +71,7 @@
                             <input name="tg" type="text" placeholder="Телеграм" class="tg inactive_form"></input>
                             <input name="phone" type="number" placeholder="Номер телефона" class="tel inactive_form"></input>
                             <div class="information">
-                                <textarea name="descr" class="info inactive_form" placeholder="О себе"  autocomplete="off"></textarea>
+                                <textarea name="descr" id="fillFormDescr" class="info inactive_form" placeholder="О себе"  autocomplete="off"></textarea>
                                 <div class="descr">Например: Редко готовлю, но люблю ботать на кухне по ночам. Хочу завести собаку. Очень люблю читать, играть в хорроры и смотреть аниме. Открыт к общению и взаимопомощи :)</div>
                             </div>
                         </div>
@@ -105,12 +105,13 @@
                                                 <div class="course"></div>
                                             </div>
                                         </div>
-                                        <div class="search"></div>
+                                        <input name="work" type="text" required disabled="disabled" id="resultFormWork" class="search"></input>
                                         <div class="bio">
-                                            <div class="bio_text">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</div>
+                                            <textarea name="descr" class="info inactive_form bio_text" required disabled="disabled" id="resultFormDescr" autocomplete="off"></textarea>
+                                            <!-- <div class="bio_text">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</div> -->
                                             <div class="action">
-                                                <div class="word">Развернуть</div>
-                                                <div class="rectan"><div class="rectan_img"><img src="icons/rectan.svg" alt=""></div></div>
+                                                <div id="more" class="word">Развернуть</div>
+                                                <!-- <div id="more"></div> -->
                                             </div>
                                         </div>
                                     </div>
