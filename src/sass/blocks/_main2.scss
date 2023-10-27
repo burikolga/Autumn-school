@@ -190,34 +190,23 @@ p {
                     border-radius: 32px;
                     background: var(--ffffff-white-main, #FFF);
                     box-shadow: 0px 1.13351px 4.29362px 0px rgba(133, 94, 152, 0.03), 0px 2.86674px 10.85888px 0px rgba(133, 94, 152, 0.04), 0px 5.84789px 22.15109px 0px rgba(133, 94, 152, 0.05), 0px 5.84789px 22.15109px 0px rgba(133, 94, 152, 0.05);
-                    .picture {
+                    .photo {
+                        all: unset;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         gap: 12px;
+                        border: 1px solid #ebebeb;
+                        border-radius: 16px;
+                        height: 140px;
+                        overflow: hidden;
+                        position: relative;
+                        width: 140px;
 
-                        .photo {
-                            width: 140px;
-                            height: 140px;
-                            border-radius: 16px;
-                            border: 1px solid #EBEBEB;
-                            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-                        }
-                        button {
-                            display: flex;
-                            padding: 6px 12px;
-                            justify-content: center;
-                            align-items: center;
-                            gap: 8px;
-                            align-self: stretch;
-                            border-radius: 4px;
-                            opacity: 0.2;
-                            background: var(--7953-c-3-purple-main, #7953C3);
-                            color: var(--ffffff-white-main, #FFF);
-                            font-size: 8px;
-                            font-style: normal;
-                            font-weight: 700;
-                            letter-spacing: -0.08px;
+                        img {
+                            height: 100%;
+                            object-fit: cover;
+                            width: 100%;
                         }
                     }
                     .text {

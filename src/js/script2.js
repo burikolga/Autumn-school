@@ -1,6 +1,12 @@
 const LS = localStorage;
 const form =document.querySelectorAll('form');
 formData = JSON.parse(LS.getItem('formData'));
+const savedImage = localStorage.getItem('savedImage');
+const photoContainer = document.querySelector('.example > .photo');
+// добавляю фото в предпросмотр
+const img = new Image();
+img.src = savedImage;
+photoContainer.appendChild(img);
 // заношу данные в сетлокейл
 form[0].addEventListener('input', function(event){
     formData[event.target.name] = event.target.value;
