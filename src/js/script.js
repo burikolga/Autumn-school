@@ -6,6 +6,9 @@ const LS = localStorage;
 const image_input = document.querySelector('input[type="file"]');
 const photoContainer = document.querySelector('.example > .photo');
 const photoContainer2 = document.querySelector('.form_fill > .photo');
+
+
+
 // загружаю фото в окно предпросмотра
 image_input.addEventListener('change', function (e) {
     console.log(image_input.files);
@@ -18,7 +21,7 @@ image_input.addEventListener('change', function (e) {
         localStorage.setItem('savedImage', url);
         console.log(url);
         location.reload();
-    }
+    } 
     reader.readAsDataURL(image_input.files[0]);
 }, false)
 console.log(url);
@@ -65,6 +68,7 @@ if (savedImage!="") {
 }
 
 
+
 // заношу данные из формы в localstorage
 form[0].addEventListener('input', function(event){
     formData[event.target.name] = event.target.value;
@@ -85,6 +89,23 @@ if (LS.getItem('formData')) {
                 form[0].elements[key].value = formData[key];
                 resultFormName.value = fillFormName.value;
                 resultFormDescr.value = fillFormDescr.value;
+                document.querySelector("#resultFormGender").value = document.querySelector('input[name="gender"]:checked').value;
+                var valueGender = document.querySelector("#resultFormGender").value;
+                localStorage.setItem('savedGender', valueGender);
+                man.addEventListener('change', function (e) {
+                    resultFormGender.value = document.querySelector('input[name="gender"]:checked').value;
+                    widthGender.style.width = 0;
+                    widthGender.style.width = widthGender.scrollWidth + "px";
+                    location.reload();
+                    // localStorage.setItem('savedGender', valueGender);
+                });
+                woman.addEventListener('change', function (e) {
+                    resultFormGender.value = document.querySelector('input[name="gender"]:checked').value;
+                    widthGender.style.width = 0;
+                    widthGender.style.width = widthGender.scrollWidth + "px";  
+                    location.reload();
+                    // localStorage.setItem('savedGender', valueGender);
+                });
                 
                 if(resultFormName.value != ''){
                     document.querySelector("#resultFormName").style.background = "none";
@@ -136,10 +157,11 @@ if (form[1]){
 }
 const widthWork = document.querySelector("#resultFormWork");
 widthWork.style.width = 0;
-widthWork.value = document.querySelector("#resultFormWork").value;
 widthWork.style.width = widthWork.scrollWidth + "px";
 
-
+const widthGender = document.querySelector("#resultFormGender");
+widthGender.style.width = 0;
+widthGender.style.width = widthGender.scrollWidth + "px";
 
 });
 

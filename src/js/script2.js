@@ -2,11 +2,17 @@ const LS = localStorage;
 const form =document.querySelectorAll('form');
 formData = JSON.parse(LS.getItem('formData'));
 const savedImage = localStorage.getItem('savedImage');
+const savedGender = localStorage.getItem('savedGender');
 const photoContainer = document.querySelector('.example > .photo');
 // добавляю фото в предпросмотр
 const img = new Image();
 img.src = savedImage;
 photoContainer.appendChild(img);
+console.log(savedGender);
+document.querySelector("#resultFormGender").value = savedGender;
+const widthGender = document.querySelector("#resultFormGender");
+widthGender.style.width = 0;
+widthGender.style.width = widthGender.scrollWidth + "px"; 
 // заношу данные в сетлокейл
 form[0].addEventListener('input', function(event){
     formData[event.target.name] = event.target.value;
@@ -38,6 +44,7 @@ if (form[0]){
             else {
                 form[0].elements[key].value = formData[key];
                 resultFormWork.value = fillFormWork.value;
+                
             }
         }
     }

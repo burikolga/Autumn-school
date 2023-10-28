@@ -249,6 +249,9 @@ p {
                                     font-size: 9px;
                                     font-style: normal;
                                     font-weight: 500;
+                                    input {
+                                        all: unset;
+                                    }
                                     .circle {
                                         display: block;
                                         width: 3px;
