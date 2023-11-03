@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeet</title>
+    <link rel="stylesheet" href="static/vendor/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="static/vendor/css/font.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="static/vendor/css/blocks/style.min.css">
+</head>
+<body>
+    <header class="registrationHeader_menu">
+        <div class="registrationHeader_menu_wrapper">
+            <div class="logo"><img src="static/vendor/icons/logo.svg" alt="logo"></div>
+            <button class="registrationHeader_menu_wrapper_button button">Выйти из аккаунта</button>
+        </div>
+    </header>
+
+    <div class="registration_firstMain">
+        <div class="container">
+            <div class="header">
+                <button class="header_btn button">На главную</button>
+                <div class="header_title">
+                    <div class="header_maintitle">Создание профиля</div>
+                    <div class="header_slash">/</div>
+                    <div class="header_subtitle">О себе</div>
+                </div>
+                <div class="header_line">
+                    <div class="header_line_dark"></div>
+                </div>
+            </div>
+            <div class="form">
+                <form action="#">
+                    <div class="form_fill">
+                        <div class="photo display_image" ">
+                            <div class="delete_photo"></div>
+                            <img src="#" alt="#">
+                            <div class="load">
+                                <div class="title">
+                                    Аватар профиля
+                                </div>
+                                <label class="button_dark">
+                                    <input type="file" id="image_input" >
+                                    Загрузить
+                                </label>
+                                
+                            </div>
+                            <div class="subtitle">
+                                Загрузите фотографию весом не более 10 мб
+                            </div>
+                        </div>
+                        
+                        <div class="descr">
+                            <div class="who">
+                                <input name="name" type="text" id="fillFormName" placeholder="Имя и фамилия" class="inactive_form name" autocomplete="off"></input>
+                                <div class="gend">
+                                    <div>
+                                        <input type="radio" id="man" name="gender" value="Парень" class=" radio-box gender" checked />
+                                        <span class="radio-style"></span>
+                                        <label for="man">Парень</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="woman" name="gender" value="Девушка" class=" radio-box gender" />
+                                        <span class="radio-style"></span>
+                                        <label for="woman">Девушка</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <label class="born">
+                                <input name="Age" class="form-control born_words" id="datePicker" type="datetime-local" placeholder="Дата рождения">
+                                <div class="born_calendar"><span class="icon-calendar"></span></div>
+                            </label>
+                            <input name="tg" type="text" placeholder="Телеграм" class="tg inactive_form"></input>
+                            <input name="phone" type="number" placeholder="Номер телефона" class="tel inactive_form"></input>
+                            <div class="information">
+                                <textarea name="descr" id="fillFormDescr" class="info inactive_form" placeholder="О себе"  autocomplete="off"></textarea>
+                                <div class="descr">Например: Редко готовлю, но люблю ботать на кухне по ночам. Хочу завести собаку. Очень люблю читать, играть в хорроры и смотреть аниме. Открыт к общению и взаимопомощи :)</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
+                <div class="form_result">
+                    <div class="all">
+                        <div class="text">
+                            <div class="future">
+                                Так будет выглядеть твоя будущая страница
+                            </div>
+                        </div>
+                        <form action="#">
+                            <div class="example">
+                                <div class="photo"></div>
+                                
+                                <div class="text">
+                                    <div class="name">
+                                        <div class="FCs">
+                                            <input name="name" type="text" required disabled="disabled" id="resultFormName" class=" full_name"></input>
+                                            <div class="age">
+                                                <input type="text" required disabled="disabled" id="resultFormGender" class="gen">
+                                                <div class="circle"></div>
+                                                <input type="text" required disabled="disabled" id="resultFormAge" class="age age_result">
+                                                <!-- <div class="age">21 год</div> -->
+                                                <div class="circle"></div>
+                                                <div class="course"></div>
+                                            </div>
+                                        </div>
+                                        <input name="work" type="text" required disabled="disabled" id="resultFormWork" class="search"></input>
+                                        <div class="bio">
+                                            <textarea name="descr" class="info inactive_form bio_text" required disabled="disabled" id="resultFormDescr" autocomplete="off"></textarea>
+                                            <!-- <div class="bio_text">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</div> -->
+                                            <div class="action">
+                                                <div id="more" class="word">Развернуть</div>
+                                                <!-- <div id="more"></div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="descr">
+                                        <div class="first">
+                                            <div class="first1"></div>
+                                            <div class="first2">
+                                                <div class="first2_1"></div>
+                                                <div class="first2_2"></div>
+                                            </div>
+                                        </div>
+                                        <div class="second">
+                                            <div class="line"></div>
+                                            <div class="second2">
+                                                <div class="second2_1"></div>
+                                                <div class="second2_2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="descr">
+                        <div class="wrapper">
+                            <div class="text">
+                                <div class="title">Мы совсем ничего про тебя не знаем</div>
+                                <div class="subtitle">Расскажи о себе. <p>Люди пишут тем, кому доверяют. Тем более при поиске соседа</p></div>
+                            </div>
+                            <div class="smile"><img src="static/vendor/icons/smile.svg" alt="smile"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="continue">
+                <a href="{% url 'regist2' %}">
+                    <button type="button" class="registForm_btn button_disable">Продолжить</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="registration_footer">
+        <div class="wrapper">
+            <div class="links">
+                <div class="email">
+                    <a href="#" class="address">Support@homeet.com</a>
+                    <a href="#" class="descr">Техническая поддержка</a>
+                </div>
+                <div class="contacts">
+                    <div class="ref">
+                        <a href="#" class="cont">О сервисе</a>
+                        <a href="#" class="cont">Контакты</a>
+                        <a href="#" class="cont">Политика конфиденциальности</a>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="social_item"><span class="icon-tg"></span></a>
+                        <a href="#" class="social_item"><span class="icon-vk"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="descr">
+                <div class="public">Предложение не является публичной офертой.<p>Сервис не несет ответственности за действия пользователей, достоверность информации и т.д.</p></div>
+                <div class="madein">Сделано в <span>бвср</span></div>
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="static/vendor/js/script.js"></script>
+</body>
+</html>
