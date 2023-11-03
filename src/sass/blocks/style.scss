@@ -3,7 +3,7 @@
     font-family: 'Museo Sans', sans-serif;
 }
 
-
+@import '../../../node_modules/flatpickr/dist/flatpickr.min.css';
 @import '_main.scss';
 @import '_header.scss';
 @import '_footer.scss';

@@ -6,6 +6,7 @@
     <title>Homeet</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="css/blocks/style.min.css">
 </head>
 <body>
@@ -66,10 +67,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="born">
-                                <div class="born_words">Дата рождения</div>
+                            <label class="born">
+                                <input name="Age" class="form-control born_words" id="datePicker" type="datetime-local" placeholder="Дата рождения">
                                 <div class="born_calendar"><span class="icon-calendar"></span></div>
-                            </div>
+                            </label>
                             <input name="tg" type="text" placeholder="Телеграм" class="tg inactive_form"></input>
                             <input name="phone" type="number" placeholder="Номер телефона" class="tel inactive_form"></input>
                             <div class="information">
@@ -98,7 +99,8 @@
                                             <div class="age">
                                                 <input type="text" required disabled="disabled" id="resultFormGender" class="gen">
                                                 <div class="circle"></div>
-                                                <div class="age">21 год</div>
+                                                <input type="text" required disabled="disabled" id="resultFormAge" class="age age_result">
+                                                <!-- <div class="age">21 год</div> -->
                                                 <div class="circle"></div>
                                                 <div class="course"></div>
                                             </div>
@@ -177,6 +179,7 @@
         <div class="line"></div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
