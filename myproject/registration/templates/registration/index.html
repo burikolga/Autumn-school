@@ -33,8 +33,8 @@
             <div class="form">
                 
                 
-                <form action="../../../registration/views.py/" method="post"> 
-                <!-- <form action="{% url 'submitF' %}" method="post">  -->
+                <form action="{% url 'submitF' %}" method="post"> 
+                
                     {% csrf_token %}
                     <div class="form_fill">
                         <div class="photo display_image" ">
@@ -84,9 +84,10 @@
                         </div>
                         
                     </div>
-                    <a href="{% url 'regist2' %}">
-                        <button type="submit button" name="btnform1" class="registForm_btn button_disable">Продолжить</button>
-                    </a>
+                    <button type="submit" name="btnform1" class="registForm_btn button_disable">Продолжить</button>
+                    <!-- <a href="{% url 'regist2' %}">
+                        <button type="submit" name="btnform1" class="registForm_btn button_disable">Продолжить</button>
+                    </a> -->
                 </form>
                 <div class="form_result">
                     <div class="all">
@@ -155,9 +156,7 @@
                 </div>
             </div>
             <div class="continue">
-                <a href="{% url 'regist2' %}">
-                    <button type="submit button" name="btnform1" class="registForm_btn button_disable">Продолжить</button>
-                </a>
+                
             </div>
         </div>
     </div>

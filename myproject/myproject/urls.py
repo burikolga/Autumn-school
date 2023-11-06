@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 
 
-from registration.views import index,regist2
-
+from registration.views import index,regist2, submitF
+from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('regist2', regist2, name='regist2'),
+    # path('', include('registration.urls')),
+    path('regist2', submitF, name="submitF"),
 ]
 
