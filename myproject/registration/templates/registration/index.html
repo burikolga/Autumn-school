@@ -31,7 +31,8 @@
                 </div>
             </div>
             <div class="form">
-                <form action="#">
+                <form action="#" id="itemForm" enctype="multipart/form-data">
+                    {% csrf_token %}
                     <div class="form_fill">
                         <div class="photo display_image" ">
                             <div class="delete_photo"></div>
@@ -41,7 +42,7 @@
                                     Аватар профиля
                                 </div>
                                 <label class="button_dark">
-                                    <input type="file" id="image_input" >
+                                    <input  name="avatar" type="file" id="image_input" >
                                     Загрузить
                                 </label>
                                 
@@ -68,7 +69,7 @@
                                 </div>
                             </div>
                             <label class="born">
-                                <input name="Age" class="form-control born_words" id="datePicker" type="datetime-local" placeholder="Дата рождения">
+                                <input name=Age" class="form-control born_words" id="datePicker" type="datetime-local" placeholder="Дата рождения">
                                 <div class="born_calendar"><span class="icon-calendar"></span></div>
                             </label>
                             <input name="tg" type="text" placeholder="Телеграм" class="tg inactive_form"></input>
@@ -100,7 +101,6 @@
                                                 <input type="text" required disabled="disabled" id="resultFormGender" class="gen">
                                                 <div class="circle"></div>
                                                 <input type="text" required disabled="disabled" id="resultFormAge" class="age age_result">
-                                                <!-- <div class="age">21 год</div> -->
                                                 <div class="circle"></div>
                                                 <div class="course"></div>
                                             </div>
@@ -108,10 +108,9 @@
                                         <input name="work" type="text" required disabled="disabled" id="resultFormWork" class="search"></input>
                                         <div class="bio">
                                             <textarea name="descr" class="info inactive_form bio_text" required disabled="disabled" id="resultFormDescr" autocomplete="off"></textarea>
-                                            <!-- <div class="bio_text">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</div> -->
+                                            
                                             <div class="action">
                                                 <div id="more" class="word">Развернуть</div>
-                                                <!-- <div id="more"></div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -149,7 +148,7 @@
             </div>
             <div class="continue">
                 <a href="{% url 'regist2' %}">
-                    <button type="button" class="registForm_btn button_disable">Продолжить</button>
+                    <button type="button" class="registForm_btn button_disable" onclick="postData()">Продолжить</button>
                 </a>
             </div>
         </div>
@@ -182,6 +181,85 @@
         </div>
         <div class="line"></div>
     </footer>
+    <!-- <table class="table">
+        <thead>
+            <tr>
+                <th>avatar</th>
+                <th>name</th>
+                <th>gender</th>
+                <th>Age</th>
+                <th>tg</th>
+                <th>phone</th>
+                <th>descr</th>
+            </tr>
+        </thead>
+        <tbody id="itemsList"></tbody>
+    </table> -->
+    <script>
+        // Function to post data
+        function postData() {
+            const formData = new FormData(document.getElementById("itemForm"));
+            
+            fetch('/myapp/api/items/', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                alert('Item saved successfully!');
+                document.getElementById("itemForm").reset();
+                fetchItems(); // Refresh the items list after posting
+            })
+            .catch(error => {
+                if (response.status === 400) {
+                    for (const field in data.errors) {
+                        const errorField = document.getElementById(`${field}Error`);
+                        errorField.textContent = data.errors[field];
+                    }
+                }
+                console.error('Error:', error);
+            });
+        }
+
+        // // Fetch and display items
+        // function fetchItems() {
+        //     fetch('/myapp/api/items/')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         const itemsList = document.getElementById("itemsList");
+        //         // itemsList.innerHTML = '';
+
+        //         data.forEach(item => {
+        //             const row = itemsList.insertRow();
+        //             const avatarCell = row.insertCell(0);
+        //             const nameCell = row.insertCell(1);
+        //             const genderCell = row.insertCell(2);
+        //             const AgeCell = row.insertCell(3);
+        //             const tgCell = row.insertCell(4);
+        //             const phoneCell = row.insertCell(5);
+        //             const descrCell = row.insertCell(6);
+
+        //             avatarCell.textContent = item.avatar;
+        //             nameCell.textContent = item.name;
+        //             genderCell.textContent = item.gender;
+        //             AgeCell.textContent = item.Age;
+        //             tgCell.textContent = item.tg;
+        //             phoneCell.textContent = item.phone;
+        //             descrCell.textContent = item.descr;
+        //         });
+        //     })
+        //     .catch(error => {
+        //         console.error('Error:', error);
+        //     });
+        // }
+
+        // Fetch items when the page loads
+        // window.onload = fetchItems;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="static/vendor/js/script.js"></script>
