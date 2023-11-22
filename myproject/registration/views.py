@@ -21,19 +21,19 @@ def regist2(request):
 #     return Response({'message': 'Hello world'})
 
 
-class ItemAPIView(APIView):
-    serializer_class = serializers.ItemSerializer
-    def get(self, request):
-        items = models.Item.objects.all()
-        serializer = self.serializer_class(items, many=True)
-        return Response(serializer.data)
+# class ItemAPIView(APIView):
+#     serializer_class = serializers.ItemSerializer
+#     def get(self, request):
+#         items = models.Item.objects.all()
+#         serializer = self.serializer_class(items, many=True)
+#         return Response(serializer.data)
 
-    def post(self, request):
-        serializer = self.serializer_class(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#     def post(self, request):
+#         serializer = self.serializer_class(data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data, status=status.HTTP_201_CREATED)
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 
 class ItemViewSet(ModelViewSet):

@@ -9,7 +9,7 @@ router.register('items', views.ItemViewSet, basename="item-viewset")
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('items/', views.ItemAPIView.as_view(), name='item-view'),
+    # path('items/', views.ItemAPIView.as_view(), name='item-view'),
 ]
 
 urlpatterns += [path(r'api/', include(router.urls))]
